@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University OOP Example</title>
+</head>
+<body>
+
+    <h2>University OOP Project</h2>
+
+    <label>Department Name:</label>
+    <input type="text" id="deptInput" placeholder="Enter department">
+    <button onclick="addDept()">Add Department</button>
+    <button onclick="removeDept()">Remove Department</button>
+
+    <h3>Departments:</h3>
+    <ul id="deptList"></ul>
+
+    <script>
+        class University {
+            constructor(name) {
+                this.name = name
+                this.departments = []
+            }
+
+            addDepartment(department) {
+                this.departments.push(department);
+            }
+
+            removeDepartment(department) {
+                const index = this.departments.indexOf(department)
+                if (index !== -1) {
+                    this.departments.splice(index, 1)
+                }
+            }
+
+            displayDepartments() {
+                return this.departments
+            }
+        }
+
+        // Create instance of University
+        const myUniversity = new University("Greenfield University")
+
+        // Handle adding a department
+        function addDept() {
+            const dept = document.getElementById("deptInput").value;
+            if (dept.trim() !== "") {
+                myUniversity.addDepartment(dept)
+                updateDisplay()
+            }
+            document.getElementById("deptInput").value = ""
+        }
+
+        // Handle removing a department
+        function removeDept() {
+            const dept = document.getElementById("deptInput").value
+            if (dept.trim() !== "") {
+                myUniversity.removeDepartment(dept)
+                updateDisplay()
+            }
+            document.getElementById("deptInput").value = ""
+        }
+
+        // Display updated list in the HTML
+        function updateDisplay() {
+            const list = document.getElementById("deptList")
+            list.innerHTML = ""
+
+            myUniversity.displayDepartments().forEach(dept => {
+                let li = document.createElement("li")
+                li.textContent = dept
+                list.appendChild(li)
+            })
+        }
+    </script>
+
+</body>
+</html>
