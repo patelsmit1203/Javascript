@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1d2671, #c33764);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.container {
+    width: 90%;
+    max-width: 700px;
+    display: grid;
+    gap: 30px;
+}
+
+/* Countdown */
+.countdown-box {
+    background: rgba(0,0,0,0.3);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    animation: fadeIn 1s ease;
+}
+
+.countdown-box input {
+    padding: 10px;
+    width: 60%;
+    margin: 15px 0;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+}
+
+.countdown-box .buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    background: #ffcc00;
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+#timer {
+    font-size: 50px;
+    margin-top: 15px;
+    animation: pulse 1s infinite;
+}
+
+/* Quotes */
+.quotes-box {
+    background: rgba(0,0,0,0.3);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 24px;
+    min-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease;
+}
+
+.quote-item.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
