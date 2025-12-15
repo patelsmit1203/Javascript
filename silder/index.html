@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="slider" id="slider">
+    <div class="slides" id="slides">
+        <div class="slide">
+            <img src="https://picsum.photos/id/1018/1000/600">
+        </div>
+        <div class="slide">
+            <img src="https://picsum.photos/id/1015/1000/600">
+        </div>
+        <div class="slide">
+            <img src="https://picsum.photos/id/1019/1000/600">
+        </div>
+    </div>
+
+    <button class="btn prev" id="prev">❮</button>
+    <button class="btn next" id="next">❯</button>
+
+    <div class="dots">
+        <span class="dot active" data-index="0"></span>
+        <span class="dot" data-index="1"></span>
+        <span class="dot" data-index="2"></span>
+    </div>
+</div>
+
+<script src="silder.js"></script>
+</body>
+</html>
