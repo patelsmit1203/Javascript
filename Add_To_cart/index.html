@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <h1>Our Exclusive Products</h1>
+
+  <div class="products">
+    
+    <div class="product">
+        <div class="image-box">
+            <img src="images/image_1.jpg" alt="Headphone">
+        </div>
+        <div class="details">
+            <h3>Headphone Pro</h3>
+            <p class="description">High-quality noise cancelling headphones for immersive sound experience.</p>
+            <p class="price">$3,000</p>
+            <button onclick="addToCart('Headphone Pro')">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="product">
+        <div class="image-box">
+            <img src="images/watch_image.jpg" alt="Watch">
+        </div>
+        <div class="details">
+            <h3>Smart Watch</h3>
+            <p class="description">A stylish smart watch with heart rate monitor and GPS tracking.</p>
+            <p class="price">$680</p>
+            <button onclick="addToCart('Smart Watch')">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="product">
+        <div class="image-box">
+            <img src="images/shoe_image.jpg" alt="Shoes">
+        </div>
+        <div class="details">
+            <h3>Running Shoes</h3>
+            <p class="description">Lightweight and comfortable shoes designed for professional runners.</p>
+            <p class="price">$1,520</p>
+            <button onclick="addToCart('Running Shoes')">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="product">
+        <div class="image-box">
+            <img src="images/powerbank_image.jpg" alt="Powerbank">
+        </div>
+        <div class="details">
+            <h3>Mega PowerBank</h3>
+            <p class="description">20000mAh fast charging power bank for all your devices.</p>
+            <p class="price">$3,000</p>
+            <button onclick="addToCart('Mega PowerBank')">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="product">
+        <div class="image-box">
+            <img src="images/image_3.jpg" alt="Headphone">
+        </div>
+        <div class="details">
+            <h3>Bass Headset</h3>
+            <p class="description">Deep bass and crystal clear audio with comfortable ear cushions.</p>
+            <p class="price">$780</p>
+            <button onclick="addToCart('Bass Headset')">Add to Cart</button>
+        </div>
+    </div>
+
+  </div>
+
+  <h1>Your Cart</h1>
+  <div class="cart">
+    <ul id="cart-items">
+        </ul>
+  </div>
+
+  <script src="Add_.js"></script>
+</body>
+</html>
