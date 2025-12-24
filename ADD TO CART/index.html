@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Shopping Cart</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <h1>Our Exclusive Products</h1>
+  </header>
+
+  <div class="main-container">
+    
+    <div class="products-area">
+      <div class="products-grid">
+        
+        <div class="product-card">
+            <div class="image-box">
+                <img src="images/image_1.jpg" alt="Headphone">
+            </div>
+            <div class="details">
+                <h3>Headphone Pro</h3>
+                <p class="description">High-quality noise cancelling headphones.</p>
+                <div class="price-action">
+                    <span class="price">$3,000</span>
+                    <button onclick="addToCart('Headphone Pro', 3000)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="image-box">
+                <img src="images/watch_image.jpg" alt="Watch">
+            </div>
+            <div class="details">
+                <h3>Smart Watch</h3>
+                <p class="description">Stylish watch with heart rate monitor.</p>
+                <div class="price-action">
+                    <span class="price">$680</span>
+                    <button onclick="addToCart('Smart Watch', 680)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="image-box">
+                <img src="images/shoe_image.jpg" alt="Shoes">
+            </div>
+            <div class="details">
+                <h3>Running Shoes</h3>
+                <p class="description">Lightweight shoes for professionals.</p>
+                <div class="price-action">
+                    <span class="price">$1,520</span>
+                    <button onclick="addToCart('Running Shoes', 1520)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="image-box">
+                <img src="images/powerbank_image.jpg" alt="Powerbank">
+            </div>
+            <div class="details">
+                <h3>Mega PowerBank</h3>
+                <p class="description">20000mAh fast charging power bank.</p>
+                <div class="price-action">
+                    <span class="price">$3,000</span>
+                    <button onclick="addToCart('Mega PowerBank', 3000)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="image-box">
+                <img src="images/image_3.jpg" alt="Headphone">
+            </div>
+            <div class="details">
+                <h3>Bass Headset</h3>
+                <p class="description">Deep bass and crystal clear audio.</p>
+                <div class="price-action">
+                    <span class="price">$780</span>
+                    <button onclick="addToCart('Bass Headset', 780)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="cart-sidebar">
+      <div class="cart-box">
+        <h2>Your Cart</h2>
+        
+        <ul id="cart-items">
+            <li class="empty-msg">Your cart is empty</li>
+        </ul>
+        
+        <div class="cart-total">
+            <strong>Total: $<span id="total-price">0</span></strong>
+        </div>
+
+        <div class="action-buttons">
+            <button class="order-btn" onclick="placeOrder()">Order Now</button>
+            
+            <button class="clear-btn" onclick="clearCart()">Clean Cart</button>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
