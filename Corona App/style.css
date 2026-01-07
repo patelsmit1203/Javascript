@@ -1,0 +1,107 @@
+:root {
+    --primary: #6366f1;
+    --danger: #ef4444;
+    --success: #22c55e;
+    --bg: #0f172a;
+    --card-bg: rgba(255, 255, 255, 0.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+    color: #f8fafc;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    background: linear-gradient(to right, #818cf8, #c084fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.card {
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-color: rgba(99, 102, 241, 0.4);
+}
+
+.card h3 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #94a3b8;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+#total-cases, #country-cases { color: #60a5fa; }
+#total-deaths, #country-critical { color: var(--danger); }
+#total-recovered, #today-cases { color: var(--success); }
+
+#country-select {
+    width: 100%;
+    max-width: 400px;
+    padding: 15px 25px;
+    background: #1e293b;
+    border: 1px solid #334155;
+    color: white;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 50px;
+    outline: none;
+    transition: border 0.3s;
+}
+
+#country-select:focus {
+    border-color: var(--primary);
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 40px 0;
+}
+
+@media (max-width: 600px) {
+    h1 { font-size: 1.8rem; }
+    .card { padding: 20px; }
+}
