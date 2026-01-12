@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Task Manager</h1>
+
+        <section class="form-section">
+            <form id="taskForm">
+                <input type="hidden" id="taskId">
+                <input type="text" id="title" placeholder="Task Title*" required>
+                <textarea id="description" placeholder="Description"></textarea>
+                <div class="input-group">
+                    <input type="date" id="dueDate" required>
+                    <select id="priority">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+                <button type="submit" id="submitBtn">Add Task</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <section class="controls">
+            <input type="text" id="searchInput" placeholder="Search tasks...">
+            <select id="filterPriority">
+                <option value="all">All Priorities</option>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+        </section>
+
+        <div id="taskList" class="task-grid"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
